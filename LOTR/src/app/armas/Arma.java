@@ -1,5 +1,8 @@
 package app.armas;
 
+/**
+ * Esta es la clase Arma base.
+ */
 public class Arma {
     public String nombre;
     public int danio;
