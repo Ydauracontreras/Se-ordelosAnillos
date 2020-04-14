@@ -1,18 +1,17 @@
 package app.personajes;
 
-import app.IHaceMAgia;
-import app.ILLevaReliquia;
-import app.armas.Arma;
 import app.reliquias.Reliquia;
 
-public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
+public class Goblin extends Criatura {
+
     public int energiaMagica;
     public Reliquia reliquia;
 
-    public Elfo(String nombre, int salud, int stamina) {
+    public Goblin(String nombre, int salud, int stamina) {
         super(nombre, salud, stamina);
-
+        // TODO Auto-generated constructor stub
     }
+
 
     public int getEnergiaMagica() {
         return energiaMagica;
@@ -29,17 +28,4 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
     public void setReliquia(Reliquia reliquia) {
         this.reliquia = reliquia;
     }
-
-    @Override
-    public boolean puedoEjecutarAtaqueEpico() {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-    @Override
-    public void ataqueEpico(Personaje personaje, Arma arma) {
-        // TODO Auto-generated method stub
-
-    }
-
 }
