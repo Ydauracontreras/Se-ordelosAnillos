@@ -6,14 +6,18 @@ import app.armas.Arma;
 import app.reliquias.Reliquia;
 
 public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
-    public int energiaMagica;
+
+    //Atributos del Elfo
+    public int energiaMagica = 100;
     public Reliquia reliquia;
+
+    //Constructor completo
 
     public Elfo(String nombre, int salud, int stamina) {
         super(nombre, salud, stamina);
 
     }
-
+//Getters y Setters
     public int getEnergiaMagica() {
         return energiaMagica;
     }
@@ -30,15 +34,23 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
         this.reliquia = reliquia;
     }
 
+    //Metodo que nos dice si puede o no hacer un ataque epico
     @Override
     public boolean puedoEjecutarAtaqueEpico() {
-        // TODO Auto-generated method stub
+        if (this.stamina< 10 && this.energiaMagica > 20) {
+            return true;
+            
+        }
         return false;
     }
 
     @Override
     public void ataqueEpico(Personaje personaje, Arma arma) {
-        // TODO Auto-generated method stub
+        if (puedoEjecutarAtaqueEpico() == true) {
+
+            personaje.salud = personaje.salud - 40;
+            
+        }
 
     }
 
