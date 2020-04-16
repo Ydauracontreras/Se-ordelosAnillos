@@ -4,9 +4,9 @@ package app.armas;
  * Esta es la clase Arma base.
  */
 public class Arma {
-    private String nombre;
-    private int danio;
-    private int stamina;
+    public String nombre;
+    public int danio;
+    public int stamina;
 
 
   public String getNombre() {

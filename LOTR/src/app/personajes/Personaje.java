@@ -7,26 +7,29 @@ import app.armas.Arma;
 
 public abstract class Personaje {
 
-    private String nombre;
-    private int salud;
-    private int stamina;
-    private List<Arma> armas = new ArrayList<Arma>();
+<<<<<<< HEAD
+    public String nombre;
+    public int salud;
+    public int stamina;
+    public List<Arma> armas = new ArrayList<Arma>();
+=======
+    //Atributos de la Clase personajes
+    public String nombre;
+    public int salud;
+    public int stamina;
+    public List<Arma> armas = new ArrayList<Arma>();
+>>>>>>> 937a61c72b7bef0bb36610fa88feb8539c755a65
 
+
+//Constructor con parametros= todos los atributos
     public Personaje(String nombre, int salud, int stamina) {
         super();
         this.nombre = nombre;
         this.salud = salud;
         this.stamina = stamina;
     }
-    public boolean estaVivo(){
-        return false;
-
-    }
-
-    public void atacar(Personaje personaje, Arma arma){
-
-    }
-
+    
+//Getters y Setters
     public String getNombre() {
         return nombre;
     }
@@ -64,6 +67,27 @@ public abstract class Personaje {
         this.armas = armas;
     }
 
+    /** Metodo para saber si el personaje esta vivo o no
+     * 
+     * @return true si el personaje tiene salud, es decir si esta vivo
+     */
+    public boolean estaVivo(){
+        if (this.salud>0) {
+            return true;
+            
+        }
+        return false;
 
+    }
+
+    /**Este metodo nos devolvera al personaje que fue atacado con la salud que le restamos
+     *  No puedo armar el metodo hasta tener armas listo
+     * @param personaje
+     * @param arma
+     */
+    public void atacar(Personaje personaje, Arma arma){
+
+
+    }
 
 }
