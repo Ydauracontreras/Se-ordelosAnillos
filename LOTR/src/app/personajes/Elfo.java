@@ -22,6 +22,7 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
         return energiaMagica;
     }
 
+    
     public Reliquia getReliquia() {
         return reliquia;
     }
