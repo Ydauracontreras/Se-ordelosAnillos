@@ -7,10 +7,10 @@ import app.armas.Arma;
 
 public abstract class Personaje {
 
-    public String nombre;
-    public int salud;
-    public int stamina;
-    public List<Arma> armas = new ArrayList<Arma>();
+    private String nombre;
+    private int salud;
+    private int stamina;
+    private List<Arma> armas = new ArrayList<Arma>();
 
     public Personaje(String nombre, int salud, int stamina) {
         super();

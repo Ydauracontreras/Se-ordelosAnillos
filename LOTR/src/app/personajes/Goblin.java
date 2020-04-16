@@ -4,8 +4,8 @@ import app.reliquias.Reliquia;
 
 public class Goblin extends Criatura {
 
-    public int energiaMagica;
-    public Reliquia reliquia;
+    private int energiaMagica;
+    private Reliquia reliquia;
 
     public Goblin(String nombre, int salud, int stamina) {
         super(nombre, salud, stamina);

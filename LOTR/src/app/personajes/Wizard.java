@@ -5,7 +5,7 @@ import app.armas.Arma;
 
 public class Wizard extends Humano implements IHaceMAgia {
 
-    public int energiaMagica;
+    private int energiaMagica;
 
     public Wizard(String nombre, int salud, int stamina) {
         super(nombre, salud, stamina);

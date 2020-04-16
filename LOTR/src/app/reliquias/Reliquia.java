@@ -1,9 +1,9 @@
 package app.reliquias;
 
 public class Reliquia {
-public String nombre;
-public double factorDeAtaque;
-public double factorDeDefensa;
+private String nombre;
+private double factorDeAtaque;
+private double factorDeDefensa;
 
 
 public String getNombre() {

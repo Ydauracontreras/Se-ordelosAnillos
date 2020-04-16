@@ -6,8 +6,8 @@ import app.armas.Arma;
 import app.reliquias.Reliquia;
 
 public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
-    public int energiaMagica;
-    public Reliquia reliquia;
+    private int energiaMagica;
+    private Reliquia reliquia;
 
     public Elfo(String nombre, int salud, int stamina) {
         super(nombre, salud, stamina);
