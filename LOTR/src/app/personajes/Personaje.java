@@ -7,18 +7,11 @@ import app.armas.Arma;
 
 public abstract class Personaje {
 
-<<<<<<< HEAD
-    public String nombre;
-    public int salud;
-    public int stamina;
-    public List<Arma> armas = new ArrayList<Arma>();
-=======
     //Atributos de la Clase personajes
     public String nombre;
     public int salud;
     public int stamina;
     public List<Arma> armas = new ArrayList<Arma>();
->>>>>>> 937a61c72b7bef0bb36610fa88feb8539c755a65
 
 
 //Constructor con parametros= todos los atributos
@@ -48,6 +41,52 @@ public abstract class Personaje {
         return armas;
     }
 
+    public void agregarArma(){
+
+        Arma baculo = new Arma();
+        baculo.setNombre ("Baculo");
+        baculo.setDanio(20);
+        baculo.setStamina(-20);
+    
+        armas.add(baculo);
+    
+        Arma espada = new Arma();
+        espada.setNombre("Espada");
+        espada.setDanio(10);
+        espada.setStamina(-10);
+    
+        armas.add(espada);
+    
+        Arma anduril = new Arma();
+        anduril.setNombre("Anduril");
+        anduril.setDanio(20);
+        anduril.setStamina(-20);
+    
+        armas.add(anduril);
+    
+        Arma sting = new Arma();
+        sting.setNombre("Sting");
+        sting.setDanio(15);
+        sting.setStamina(-10);
+    
+        armas.add(sting);
+    
+        Arma arcoYFlecha = new Arma();
+        arcoYFlecha.setNombre("Arco y Fecla");
+        arcoYFlecha.setDanio(5);
+        arcoYFlecha.setStamina(-10);
+    
+        armas.add(arcoYFlecha);
+    
+        Arma hachaDoble = new Arma();
+        hachaDoble.setNombre("Hacha doble");
+        hachaDoble.setDanio(10);
+        hachaDoble.setStamina(-10);
+    
+        armas.add(hachaDoble);
+    
+    
+    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -71,7 +110,11 @@ public abstract class Personaje {
      * 
      * @return true si el personaje tiene salud, es decir si esta vivo
      */
-    public boolean estaVivo(){
+    
+
+    
+    
+     public boolean estaVivo(){
         if (this.salud>0) {
             return true;
             

@@ -6,12 +6,8 @@ import app.armas.Arma;
 
 public class Wizard extends Humano implements IHaceMAgia {
 
-<<<<<<< HEAD
-    public int energiaMagica;
-=======
 
     public int energiaMagica;
->>>>>>> 937a61c72b7bef0bb36610fa88feb8539c755a65
 
     //Constructor 
     public Wizard(String nombre, int salud, int stamina) {

@@ -4,12 +4,14 @@ package app.armas;
  * Esta es la clase Arma base.
  */
 public class Arma {
-    public String nombre;
-    public int danio;
-    public int stamina;
+    private String nombre;
+    private int danio;
+    private int stamina;
 
 
   public String getNombre() {
+
+
       return nombre;
   }
 
@@ -32,5 +34,7 @@ public class Arma {
   public void setStamina(int stamina) {
       this.stamina = stamina;
   }
+
+  
 
 }
