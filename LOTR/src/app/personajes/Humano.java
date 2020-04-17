@@ -16,16 +16,15 @@ public class Humano extends Personaje implements ILLevaReliquia {
         super();
     }
 
-	@Override
+    @Override
     public Reliquia getReliquia() {
         return reliquia;
     }
 
-
     @Override
-    public void setReliquia(Reliquia reliquia) {
-    this.reliquia = reliquia;
-
+	public void setReliquia(Reliquia reliquia) {
+		this.reliquia = reliquia;
+		
     }
-
+    
 }

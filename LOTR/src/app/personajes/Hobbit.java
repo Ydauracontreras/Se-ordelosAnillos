@@ -11,12 +11,18 @@ public class Hobbit extends Criatura implements ILLevaReliquia{
         this.reliquia = reliquia;
     }
 
+    @Override
     public Reliquia getReliquia() {
         return reliquia;
     }
 
+    @Override
     public void setReliquia(Reliquia reliquia) {
-        this.reliquia = reliquia;
+      this.reliquia = reliquia;
+
     }
+
+
+
 
 }

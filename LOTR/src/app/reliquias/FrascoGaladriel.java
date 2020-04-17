@@ -9,6 +9,7 @@ public class FrascoGaladriel extends Reliquia implements IEsMagico{
         super(nombre, factorDeAtaque, factorDeDefensa);
     }
 
+
     @Override
     public int getEnergiaMagica() {
         return 0;
