@@ -6,8 +6,9 @@ import app.reliquias.Reliquia;
 public class Hobbit extends Criatura implements ILLevaReliquia{
     public Reliquia reliquia;
 
-    public Hobbit(String nombre, int salud, int stamina) {
-        super(nombre, salud, stamina);
+    public Hobbit(String nombre, int salud, int stamina, Reliquia reliquia) {
+        super(nombre, stamina, stamina);
+        this.reliquia = reliquia;
     }
 
     public Reliquia getReliquia() {

@@ -1,10 +1,20 @@
 package app.reliquias;
 
+
 public class Reliquia {
 public String nombre;
 public double factorDeAtaque;
 public double factorDeDefensa;
 
+public Reliquia(String nombre, double factorDeAtaque, double factorDeDefensa) {
+    super();
+    this.nombre = nombre;
+    this.factorDeAtaque = factorDeAtaque;
+    this.factorDeDefensa = factorDeDefensa;
+}
+
+public Reliquia() {
+}
 
 public String getNombre() {
     return nombre;
