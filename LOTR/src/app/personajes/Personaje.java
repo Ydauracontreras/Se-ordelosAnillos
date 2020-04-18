@@ -40,53 +40,7 @@ public abstract class Personaje {
     public List<Arma> getArmas() {
         return armas;
     }
-
-    public void agregarArma(){
-
-        Arma baculo = new Arma();
-        baculo.setNombre ("Baculo");
-        baculo.setDanio(20);
-        baculo.setStamina(-20);
     
-        armas.add(baculo);
-    
-        Arma espada = new Arma();
-        espada.setNombre("Espada");
-        espada.setDanio(10);
-        espada.setStamina(-10);
-    
-        armas.add(espada);
-    
-        Arma anduril = new Arma();
-        anduril.setNombre("Anduril");
-        anduril.setDanio(20);
-        anduril.setStamina(-20);
-    
-        armas.add(anduril);
-    
-        Arma sting = new Arma();
-        sting.setNombre("Sting");
-        sting.setDanio(15);
-        sting.setStamina(-10);
-    
-        armas.add(sting);
-    
-        Arma arcoYFlecha = new Arma();
-        arcoYFlecha.setNombre("Arco y Fecla");
-        arcoYFlecha.setDanio(5);
-        arcoYFlecha.setStamina(-10);
-    
-        armas.add(arcoYFlecha);
-    
-        Arma hachaDoble = new Arma();
-        hachaDoble.setNombre("Hacha doble");
-        hachaDoble.setDanio(10);
-        hachaDoble.setStamina(-10);
-    
-        armas.add(hachaDoble);
-    
-    
-    }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
