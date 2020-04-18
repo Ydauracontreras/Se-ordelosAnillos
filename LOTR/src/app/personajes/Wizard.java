@@ -11,7 +11,11 @@ public class Wizard extends Humano implements IHaceMAgia {
 
     //Constructor 
     public Wizard(String nombre, int salud, int stamina) {
-        super(nombre, salud, stamina);
+        super();
+    }
+
+    public Wizard() {
+        super();
     }
 //Getter
     public int getEnergiaMagica() {

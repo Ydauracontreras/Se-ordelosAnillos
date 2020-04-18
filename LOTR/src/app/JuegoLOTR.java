@@ -11,38 +11,59 @@ import app.armas.Espada;
 import app.armas.HachaDoble;
 import app.armas.Sting;
 import app.personajes.Personaje;
+import app.reliquias.Reliquia;
+import app.reliquias.AnilloElfo;
+import app.reliquias.AnilloNarya;
+import app.reliquias.AnilloNenya;
+import app.reliquias.AnilloPoder;
+import app.reliquias.AnilloSauron;
+import app.reliquias.AnilloVilya;
+import app.reliquias.ChalecoMithril;
+import app.reliquias.FrascoGaladriel;
 
 public class JuegoLOTR {
-
+    public static List<Reliquia> reliquias = new ArrayList<Reliquia>();
     public List<Arma> armas = new ArrayList<Arma>();
     public List<Personaje> personajes = new ArrayList<Personaje>();
 
-    public void agregarArma() {
+    public void inicializarJuego(){
 
+        
+        // Listado de armas
         Baculo baculo = new Baculo("Baculo", 20, 20);
-        armas.add(baculo);
-
-        Espada espada = new Espada("Espada", 10, 10);
-        armas.add(espada);
-
+        Espada espada = new Espada("Espada", 10, 10);     
         Anduril anduril = new Anduril("Anduril", 20, 20);
-        armas.add(anduril);
-
         Sting sting = new Sting("Sting", 15, 10);
-        armas.add(sting);
-
         ArcoYFlecha arcoYFlecha = new ArcoYFlecha("Arco y flecha", 5, 10);
-        armas.add(arcoYFlecha);
-
         HachaDoble hachaDoble = new HachaDoble("Hacha doble", 10, 10);
+        armas.add(baculo);
+        armas.add(espada);
+        armas.add(anduril);
+        armas.add(sting);
+        armas.add(arcoYFlecha);
         armas.add(hachaDoble);
+        
+
+            // Listado de Reliquias
+        FrascoGaladriel frascoGaladriel = new FrascoGaladriel("Frasco Galadriel", 10, 10);
+        ChalecoMithril chalecoMithril = new ChalecoMithril("Chaleco Mithril", 20, 80);
+        AnilloVilya anilloVilya = new AnilloVilya("Anillo Vilya", 10, 20);
+        AnilloSauron anilloSauron = new AnilloSauron("AnilloSauron", 20, 20);
+        AnilloPoder anilloPoder = new AnilloPoder("Anillo Poder", 10, 20);
+        AnilloNenya anilloNenya = new AnilloNenya("AnilloNenya", 20, 10);
+        AnilloNarya anilloNarya = new AnilloNarya("AnilloNarya", 10, 20);
+        AnilloElfo anilloElfo = new AnilloElfo("AnilloElfo", 20, 10);
+        reliquias.add(frascoGaladriel);
+        reliquias.add(chalecoMithril);
+        reliquias.add(anilloVilya);
+        reliquias.add(anilloSauron);
+        reliquias.add(anilloPoder);
+        reliquias.add(anilloNenya);
+        reliquias.add(anilloNarya);
+        reliquias.add(anilloElfo);
 
     }
-
-    public void inicializarJuego() {
-
-    }
-
+    //elegir Personaje
     public Personaje elegirPersonaje(String nombre) {
         for (Personaje personaje : personajes) {
             if (personaje.getNombre().equals(nombre)) {
@@ -52,6 +73,7 @@ public class JuegoLOTR {
         return null;
     }
 
+    //elegir arma
     public Arma elegirArma(String nombre) {
 
         for (Arma arma : armas) {
@@ -63,4 +85,20 @@ public class JuegoLOTR {
 
     }
 
-}
+
+    //Elegir la reliquia de la lista
+    public Reliquia elegirReliquia(String nombre) {
+        for (Reliquia reliquia : reliquias) {
+            if(reliquia.getNombre().equals(nombre))
+             return reliquia;
+        }
+        return null;
+    }
+
+     
+
+    }
+
+    
+    
+

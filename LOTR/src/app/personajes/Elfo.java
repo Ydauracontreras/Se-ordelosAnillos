@@ -8,11 +8,13 @@ import app.reliquias.Reliquia;
 public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
     public int energiaMagica;
     public Reliquia reliquia;
-
-    public Elfo(String nombre, int salud, int stamina) {
-        super(nombre, salud, stamina);
-
+    
+    public Elfo(String nombre, int salud, int stamina, Reliquia reliquia) {
+        super(nombre, stamina, stamina);
+        this.reliquia = reliquia;
     }
+
+   
 
     public int getEnergiaMagica() {
         return energiaMagica;
@@ -33,13 +35,13 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
 
     @Override
     public boolean puedoEjecutarAtaqueEpico() {
-        // TODO Auto-generated method stub
+     
         return false;
     }
 
     @Override
     public void ataqueEpico(Personaje personaje, Arma arma) {
-        // TODO Auto-generated method stub
+      
 
     }
 

@@ -15,14 +15,18 @@ public abstract class Personaje {
 
 
 //Constructor con parametros= todos los atributos
-    public Personaje(String nombre, int salud, int stamina) {
+    public Personaje(String nombre, int salud, int stamina ) {
         super();
         this.nombre = nombre;
         this.salud = salud;
         this.stamina = stamina;
     }
+
+    public Personaje() {
+        super();
+    }
     
-//Getters y Setters
+	//Getters y Setters
     public String getNombre() {
         return nombre;
     }
