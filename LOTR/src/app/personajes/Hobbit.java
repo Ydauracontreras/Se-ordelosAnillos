@@ -10,6 +10,10 @@ public class Hobbit extends Criatura implements ILLevaReliquia{
         super(nombre, stamina, stamina);
         this.reliquia = reliquia;
     }
+    public Hobbit(String nombre, int salud, int stamina) {
+        super(nombre, stamina, stamina);
+        
+    }
 
     @Override
     public Reliquia getReliquia() {

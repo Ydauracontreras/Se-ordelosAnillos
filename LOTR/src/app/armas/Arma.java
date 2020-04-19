@@ -9,7 +9,19 @@ public class Arma {
     private int stamina;
 
 
-  public String getNombre() {
+    public Arma(String nombre, int danio, int stamina) {
+        super();
+        this.nombre = nombre;
+        this.danio = danio;
+        this.stamina = stamina;
+    }
+
+    
+  public Arma() {
+	}
+
+
+public String getNombre() {
 
 
       return nombre;

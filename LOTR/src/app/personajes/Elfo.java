@@ -13,6 +13,9 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
         super(nombre, stamina, stamina);
         this.reliquia = reliquia;
     }
+    public Elfo(String nombre, int salud, int stamina) {
+        super(nombre, stamina, stamina);
+    }
 
    
 

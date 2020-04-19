@@ -6,4 +6,7 @@ public class Criatura extends Personaje {
         super(nombre, salud, stamina);
     }
 
+	public Criatura() {
+	}
+
 }

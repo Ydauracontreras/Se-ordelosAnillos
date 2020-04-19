@@ -6,10 +6,12 @@ import app.reliquias.Reliquia;
 public class Humano extends Personaje implements ILLevaReliquia {
     public Reliquia reliquia;
 
-    
     public Humano(String nombre, int salud, int stamina, Reliquia reliquia) {
         super(nombre, stamina, stamina);
         this.reliquia = reliquia;
+    }
+    public Humano(String nombre, int salud, int stamina) {
+        super(nombre, stamina, stamina);
     }
 
     public Humano() {
@@ -22,9 +24,9 @@ public class Humano extends Personaje implements ILLevaReliquia {
     }
 
     @Override
-	public void setReliquia(Reliquia reliquia) {
-		this.reliquia = reliquia;
-		
+    public void setReliquia(Reliquia reliquia) {
+        this.reliquia = reliquia;
+
     }
-    
+
 }

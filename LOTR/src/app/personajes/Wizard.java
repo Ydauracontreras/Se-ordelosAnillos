@@ -4,19 +4,21 @@ import app.IHaceMAgia;
 import app.armas.Arma;
 
 
-public class Wizard extends Humano implements IHaceMAgia {
+public class Wizard extends Personaje implements IHaceMAgia {
 
 
     public int energiaMagica;
 
     //Constructor 
-    public Wizard(String nombre, int salud, int stamina) {
+    public Wizard(String nombre, int salud, int stamina,  int energiaMagica
+    ) {
         super();
+        this.nombre = nombre;
+        this.salud = salud;
+        this.stamina = stamina;
+        this.energiaMagica = energiaMagica;
     }
 
-    public Wizard() {
-        super();
-    }
 //Getter
     public int getEnergiaMagica() {
         return energiaMagica;
