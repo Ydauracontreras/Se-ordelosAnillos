@@ -2,8 +2,8 @@ package app.personajes;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import app.armas.Arma;
+
 
 public class Personaje {
 
@@ -22,7 +22,7 @@ public class Personaje {
         this.stamina = stamina;
     }
     
-
+//Constructor
     public Personaje() {
         super();
     }
@@ -69,9 +69,6 @@ public class Personaje {
      * @return true si el personaje tiene salud, es decir si esta vivo
      */
     
-
-    
-    
      public boolean estaVivo(){
         if (this.salud>0) {
             return true;
@@ -87,6 +84,9 @@ public class Personaje {
      * @param arma
      */
     public void atacar(Personaje personaje, Arma arma){
+
+        personaje.setSalud(personaje.salud - arma.getDanio());
+
 
 
     }
