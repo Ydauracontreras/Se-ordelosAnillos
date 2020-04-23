@@ -1,5 +1,7 @@
 package app.personajes;
 
+import app.ILLevaReliquia;
+import app.armas.Arma;
 import app.reliquias.Reliquia;
 
 public class Goblin extends Criatura {
@@ -27,4 +29,13 @@ public class Goblin extends Criatura {
     public void setReliquia(Reliquia reliquia) {
         this.reliquia = reliquia;
     }
+
+    public void atacar(Personaje personajeAtacado, Arma arma){
+
+        int danio = (int)(arma.getDanio()- arma.getDanio()* (((ILLevaReliquia)personajeAtacado).getReliquia().getFactorDeDefensa()));
+        
+        personajeAtacado.setSalud(personajeAtacado.salud - danio);
+        this.setStamina(this.getStamina()- arma.getStamina());
+
+}
 }

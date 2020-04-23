@@ -2,10 +2,10 @@ package app.personajes;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import app.armas.Arma;
 
-public abstract class Personaje {
+
+public class Personaje {
 
     //Atributos de la Clase personajes
     public String nombre;
@@ -21,7 +21,8 @@ public abstract class Personaje {
         this.salud = salud;
         this.stamina = stamina;
     }
-
+    
+//Constructor
     public Personaje() {
         super();
     }
@@ -44,7 +45,6 @@ public abstract class Personaje {
     public List<Arma> getArmas() {
         return armas;
     }
-    
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
@@ -69,9 +69,6 @@ public abstract class Personaje {
      * @return true si el personaje tiene salud, es decir si esta vivo
      */
     
-
-    
-    
      public boolean estaVivo(){
         if (this.salud>0) {
             return true;
@@ -87,6 +84,9 @@ public abstract class Personaje {
      * @param arma
      */
     public void atacar(Personaje personaje, Arma arma){
+
+        personaje.setSalud(personaje.salud - arma.getDanio());
+
 
 
     }

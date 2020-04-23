@@ -3,6 +3,7 @@ package app.reliquias;
 import app.IEsMagico;
 
 public class FrascoGaladriel extends Reliquia implements IEsMagico{
+    int miEnergiaMagica;
     
 
 	public FrascoGaladriel(String nombre, double factorDeAtaque, double factorDeDefensa) {
@@ -12,11 +13,12 @@ public class FrascoGaladriel extends Reliquia implements IEsMagico{
 
     @Override
     public int getEnergiaMagica() {
-        return 0;
+        return miEnergiaMagica;
     }
 
     @Override
     public void setEnergiaMagica(int energiaMagica) {
+        energiaMagica = miEnergiaMagica;
 
     }
 

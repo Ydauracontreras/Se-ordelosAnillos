@@ -8,9 +8,6 @@ public class Arma {
     private int danio;
     private int stamina;
 
-    public Arma() {
-
-    }
 
     public Arma(String nombre, int danio, int stamina) {
         super();
@@ -19,29 +16,37 @@ public class Arma {
         this.stamina = stamina;
     }
 
-    public String getNombre() {
+    
+  public Arma() {
+	}
 
-        return nombre;
-    }
 
-    public int getDanio() {
-        return danio;
-    }
+public String getNombre() {
 
-    public int getStamina() {
-        return stamina;
-    }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+      return nombre;
+  }
 
-    public void setDanio(int danio) {
-        this.danio = danio;
-    }
+  public int getDanio() {
+      return danio;
+  }
 
-    public void setStamina(int stamina) {
-        this.stamina = stamina;
-    }
+  public int getStamina() {
+      return stamina;
+  }
+
+  public void setNombre(String nombre) {
+      this.nombre = nombre;
+  }
+ 
+  public void setDanio(int danio) {
+      this.danio = danio;
+  }
+
+  public void setStamina(int stamina) {
+      this.stamina = stamina;
+  }
+
+  
 
 }

@@ -1,7 +1,9 @@
 package app.personajes;
 
+import app.IEsMagico;
 import app.IHaceMAgia;
 import app.armas.Arma;
+import app.reliquias.FrascoGaladriel;
 
 
 public class Wizard extends Humano implements IHaceMAgia {
@@ -10,13 +12,15 @@ public class Wizard extends Humano implements IHaceMAgia {
     public int energiaMagica;
 
     //Constructor 
-    public Wizard(String nombre, int salud, int stamina) {
+    public Wizard(String nombre, int salud, int stamina,  int energiaMagica
+    ) {
         super();
+        this.nombre = nombre;
+        this.salud = salud;
+        this.stamina = stamina;
+        this.energiaMagica = energiaMagica;
     }
 
-    public Wizard() {
-        super();
-    }
 //Getter
     public int getEnergiaMagica() {
         return energiaMagica;
@@ -41,9 +45,22 @@ public class Wizard extends Humano implements IHaceMAgia {
     public void ataqueEpico(Personaje personaje, Arma arma) {
         
         if (puedoEjecutarAtaqueEpico() == true) {
-            personaje.salud = personaje.salud -50 ;
-            
+            personaje.setSalud(personaje.getSalud()-30);
+            this.stamina = 0;
+            this.energiaMagica =0;
         }
+    }
+
+    @Override
+    public void atacar(Personaje personajeAtacado, Arma arma){
+        int danio = (int)(arma.getDanio()+ (arma.getDanio()* reliquia.getFactorDeAtaque()) - (arma.getDanio()*reliquia.getFactorDeDefensa()))  ;
+        
+        personajeAtacado.setSalud(personajeAtacado.salud - danio);
+        this.setStamina(this.getStamina()- arma.getStamina());
+        if (this.getReliquia() instanceof IEsMagico) {
+            this.setEnergiaMagica(this.getEnergiaMagica() - ((IEsMagico)reliquia).getEnergiaMagica());
+        }
+        
 
     }
 
