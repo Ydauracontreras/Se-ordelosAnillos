@@ -3,7 +3,8 @@ package app.reliquias;
 import app.IEsMagico;
 
 public class FrascoGaladriel extends Reliquia implements IEsMagico{
-    int miEnergiaMagica;
+    
+    private int miEnergiaMagica;
     
 
 	public FrascoGaladriel(String nombre, double factorDeAtaque, double factorDeDefensa) {
