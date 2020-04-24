@@ -8,11 +8,11 @@ public class Hobbit extends Criatura implements ILLevaReliquia{
     protected Reliquia reliquia;
 
     public Hobbit(String nombre, int salud, int stamina, Reliquia reliquia) {
-        super(nombre, stamina, stamina);
+        super(nombre, salud, stamina);
         this.reliquia = reliquia;
     }
     public Hobbit(String nombre, int salud, int stamina) {
-        super(nombre, stamina, stamina);
+        super(nombre, salud, stamina);
         
     }
 

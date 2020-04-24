@@ -72,7 +72,7 @@ public class JuegoLOTR {
         Humano humanoDos = new Humano("Eowyn", 100, 50);
         Hobbit hobbitUno = new Hobbit("Frodo", 100, 30);
         Hobbit hobbitDos = new Hobbit("Samsagaz", 100, 30);
-        Goblin goblinUno = new Goblin("gobblin", 100, 40);
+        Goblin goblinUno = new Goblin("gobblinUno", 100, 40);
         Goblin goblinDos = new Goblin("gobblinDos", 100, 40);
         Orco orcoUno = new Orco("Ugluk", 100, 60);
         Orco orcoDos = new Orco("Snaga", 100, 60);
@@ -270,14 +270,14 @@ public class JuegoLOTR {
                 }
 
             } else {
-                System.out.println(ANSI_GREEN+"********      "+ personaje2.getNombre() + "  ha sido derrotado      ********"+ ANSI_RESET);
+                System.out.println(ANSI_GREEN+"********      "+ personaje2.getNombre() + "  ha sido derrotado         ********"+ ANSI_RESET);
             }
             if (personaje1.estaVivo()) {
                 System.out.println(ANSI_BLUE+"El jugador uno: " + personaje1.getNombre() + " tiene : " + personaje1.getSalud()
                         + " de salud y " + personaje1.getStamina() + " de Stamina"+ ANSI_RESET);
 
             } else {
-                System.out.println(ANSI_BLUE+"********      "+personaje1.getNombre() + "  ha sido derrotado      ********"+ ANSI_RESET);
+                System.out.println(ANSI_BLUE+"********      "+personaje1.getNombre() + "  ha sido derrotado            ********"+ ANSI_RESET);
             }
 
         }

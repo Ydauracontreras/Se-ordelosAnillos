@@ -10,7 +10,7 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
     private Reliquia reliquia;
     
     public Elfo(String nombre, int salud, int stamina, Reliquia reliquia) {
-        super(nombre, stamina, stamina);
+        super(nombre, salud, stamina);
         this.reliquia = reliquia;
     }
 
@@ -20,7 +20,7 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
     }
     
     public Elfo(String nombre, int salud, int stamina) {
-        super(nombre, stamina, stamina);
+        super(nombre, salud, stamina);
     }
 
    
@@ -85,5 +85,4 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
        
 }
     }
-}
 }
