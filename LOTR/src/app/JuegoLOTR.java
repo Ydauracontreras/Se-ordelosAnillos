@@ -72,14 +72,14 @@ public class JuegoLOTR {
         Humano humanoDos = new Humano("Eowyn", 100, 50);
         Hobbit hobbitUno = new Hobbit("Frodo", 100, 30);
         Hobbit hobbitDos = new Hobbit("Samsagaz", 100, 30);
-        Goblin goblinUno = new Goblin("Goblin", 100, 40);
-        Goblin goblinDos = new Goblin("GoblinDos", 100, 40);
+        Goblin goblinUno = new Goblin("gobblin", 100, 40);
+        Goblin goblinDos = new Goblin("gobblinDos", 100, 40);
         Orco orcoUno = new Orco("Ugluk", 100, 60);
         Orco orcoDos = new Orco("Snaga", 100, 60);
-        Troll trollUno = new Troll("TrollUno", 100, 40);
-        Troll trollDos = new Troll("TrollDos", 100, 40);
-        Enano enanoUno = new Enano("EnanoUno", 100, 30);
-        Enano enanoDos = new Enano("EnanoDos", 100, 30);
+        Troll trollUno = new Troll("trollUno", 100, 40);
+        Troll trollDos = new Troll("trollDos", 100, 40);
+        Enano enanoUno = new Enano("enanoUno", 100, 30);
+        Enano enanoDos = new Enano("enanoDos", 100, 30);
 
         // Nombre,Salud,Stamina, Energia MAgica
         Wizard wizardUno = new Wizard("Gandalf", 100, 80, 100);
@@ -195,13 +195,13 @@ public class JuegoLOTR {
         System.out.println(ANSI_CYAN + "********                 ELFO                    ********" + ANSI_RESET);
         System.out.println(ANSI_WHITE + "                         Legolas\n                         Arwen");
         System.out.println(ANSI_CYAN + "********                 ENANO                    ********" + ANSI_RESET);
-        System.out.println(ANSI_WHITE + "                         EnanoUno\n                         EnanoDos");
+        System.out.println(ANSI_WHITE + "                         enanoUno\n                         enanoDos");
         System.out.println(ANSI_CYAN + "********                 ORCO                    ********" + ANSI_RESET);
         System.out.println(ANSI_WHITE + "                         Ugluk\n                         Snaga");
         System.out.println(ANSI_CYAN + "********                 TROLL                   ********" + ANSI_RESET);
-        System.out.println(ANSI_WHITE + "                         TrollUno\n                         TrollDos");
+        System.out.println(ANSI_WHITE + "                         trollUno\n                         trollDos");
         System.out.println(ANSI_CYAN + "********                 GOBBLIN                 ********" + ANSI_RESET);
-        System.out.println(ANSI_WHITE + "                         GobblinUno\n                         GobblinDos");
+        System.out.println(ANSI_WHITE + "                         gobblinUno\n                         gobblinDos");
         System.out.println(ANSI_CYAN + "*********************************************************" + ANSI_RESET);
     }
 
@@ -212,7 +212,7 @@ public class JuegoLOTR {
         System.out.println(ANSI_RED + "********                Hacha Doble            ********" + ANSI_RESET);
         System.out.println(ANSI_RED + "********                 Espada                ********" + ANSI_RESET);
         System.out.println(ANSI_RED + "********                 Anduril               ********" + ANSI_RESET);
-        System.out.println(ANSI_RED + "********                 String                ********" + ANSI_RESET);
+        System.out.println(ANSI_RED + "********                 Sting                ********" + ANSI_RESET);
         System.out.println(ANSI_RED + "*******************************************************" + ANSI_RESET);
 
     }
@@ -270,23 +270,23 @@ public class JuegoLOTR {
                 }
 
             } else {
-                System.out.println(ANSI_GREEN+"********"+personaje2.getNombre() + "  ha sido derrotado********"+ ANSI_RESET);
+                System.out.println(ANSI_GREEN+"********      "+ personaje2.getNombre() + "  ha sido derrotado      ********"+ ANSI_RESET);
             }
             if (personaje1.estaVivo()) {
                 System.out.println(ANSI_BLUE+"El jugador uno: " + personaje1.getNombre() + " tiene : " + personaje1.getSalud()
                         + " de salud y " + personaje1.getStamina() + " de Stamina"+ ANSI_RESET);
 
             } else {
-                System.out.println(ANSI_BLUE+"********"+personaje1.getNombre() + "  ha sido derrotado********"+ ANSI_RESET);
+                System.out.println(ANSI_BLUE+"********      "+personaje1.getNombre() + "  ha sido derrotado      ********"+ ANSI_RESET);
             }
 
         }
         if (personaje1.estaVivo()) {
-            System.out.println(ANSI_BLUE+"********El jugador 1: " + personaje1.getNombre() + " es el Ganador********"+ ANSI_RESET);
+            System.out.println(ANSI_BLUE+"********      El jugador 1: " + personaje1.getNombre() + " es el Ganador      ********"+ ANSI_RESET);
 
         }
         if (personaje2.estaVivo()) {
-            System.out.println(ANSI_GREEN+ "********El jugador 2: " + personaje2.getNombre() + "  es el Ganador********"+ ANSI_RESET);
+            System.out.println(ANSI_GREEN+ "********      El jugador 2: " + personaje2.getNombre() + "  es el Ganador      ********"+ ANSI_RESET);
         }
     }
 

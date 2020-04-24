@@ -9,22 +9,21 @@ public class Enano extends Criatura {
         super(nombre, salud, stamina);
     }
 
-    public void atacar(Personaje personajeAtacado, Arma arma){
+    @Override
+    public void atacar(Personaje personajeAtacado, Arma arma) {
 
         if (personajeAtacado instanceof ILLevaReliquia) {
-            int danio = (int)(arma.getDanio()- arma.getDanio()*(((ILLevaReliquia)personajeAtacado).getReliquia().getFactorDeDefensa()));
-        
-            personajeAtacado.setSalud(personajeAtacado.salud - danio);
-            this.setStamina(this.getStamina()- arma.getStamina());
-        }
-        else{
-            int danio = (int)(arma.getDanio()- arma.getDanio());
-            personajeAtacado.setSalud(personajeAtacado.salud - danio);
-            this.setStamina(this.getStamina()- arma.getStamina());
-        }
-       
+            int danio = (int) (arma.getDanio()
+                    - arma.getDanio() * (((ILLevaReliquia) personajeAtacado).getReliquia().getFactorDeDefensa()));
 
-}
-    
+            personajeAtacado.setSalud(personajeAtacado.salud - danio);
+            this.setStamina(this.getStamina() - arma.getStamina());
+        } else {
+            int danio = (int) (arma.getDanio() - arma.getDanio());
+            personajeAtacado.setSalud(personajeAtacado.salud - danio);
+            this.setStamina(this.getStamina() - arma.getStamina());
+        }
+
+    }
 
 }

@@ -63,17 +63,26 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
     @Override
     public void atacar(Personaje personajeAtacado, Arma arma){
 
-        int danio = (int)(arma.getDanio()+ (arma.getDanio()* this.reliquia.getFactorDeAtaque()) - (arma.getDanio()*reliquia.getFactorDeDefensa()))  ;
+        if (personajeAtacado instanceof ILLevaReliquia) {
+            int danio = (int)(arma.getDanio()+ (arma.getDanio()* this.reliquia.getFactorDeAtaque()) - (arma.getDanio()*reliquia.getFactorDeDefensa()))  ;
         
         personajeAtacado.setSalud(personajeAtacado.salud - danio);
         this.setStamina(this.getStamina()- arma.getStamina());
         if (this.getReliquia() instanceof IEsMagico) {
             this.setEnergiaMagica(this.getEnergiaMagica() - ((IEsMagico)reliquia).getEnergiaMagica());
-
-    }
+        }
+        } else{
+            int danio = (int)(arma.getDanio()+ (arma.getDanio()*this.reliquia.getFactorDeAtaque()))  ;
+        
+            personajeAtacado.setSalud(personajeAtacado.salud - danio);
+            this.setStamina(this.getStamina()- arma.getStamina());
+            if (this.getReliquia() instanceof IEsMagico) {
+                this.setEnergiaMagica(this.getEnergiaMagica() - ((IEsMagico)reliquia).getEnergiaMagica());
+            }
 
    
 
     
     }
+}
 }
