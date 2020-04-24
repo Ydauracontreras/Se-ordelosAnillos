@@ -8,10 +8,10 @@ import app.armas.Arma;
 public class Personaje {
 
     //Atributos de la Clase personajes
-    public String nombre;
-    public int salud;
-    public int stamina;
-    public List<Arma> armas = new ArrayList<Arma>();
+    private String nombre;
+    private int salud;
+    private int stamina;
+    private List<Arma> armas = new ArrayList<Arma>();
 
 
 //Constructor con parametros= todos los atributos
@@ -70,7 +70,7 @@ public class Personaje {
      */
     
      public boolean estaVivo(){
-        if (this.salud>0) {
+        if (this.salud>0 && this.stamina >0) {
             return true;
             
         }

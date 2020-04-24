@@ -6,7 +6,7 @@ import app.reliquias.Reliquia;
 
 public class Humano extends Personaje implements ILLevaReliquia {
     //Atributo
-    public Reliquia reliquia;
+    protected Reliquia reliquia;
 
 //Constructores
     public Humano(String nombre, int salud, int stamina, Reliquia reliquia) {
@@ -34,11 +34,18 @@ public class Humano extends Personaje implements ILLevaReliquia {
     }
     @Override
     public void atacar(Personaje personajeAtacado, Arma arma){
-        int danio = (int)(arma.getDanio()+ (arma.getDanio()* reliquia.getFactorDeAtaque()) - (arma.getDanio()*reliquia.getFactorDeDefensa()))  ;
+    if (personajeAtacado instanceof ILLevaReliquia) {
+            int danio = (int)(arma.getDanio()+ (arma.getDanio()* this.reliquia.getFactorDeAtaque()) - (arma.getDanio()*reliquia.getFactorDeDefensa()))  ;
         
-        personajeAtacado.setSalud(personajeAtacado.salud - danio);
-        this.setStamina(this.getStamina()- arma.getStamina());
-
+            personajeAtacado.setSalud(personajeAtacado.getSalud() - danio);
+            this.setStamina(this.getStamina()- arma.getStamina());
+        } else{
+            int danio = (int)(arma.getDanio()+ (arma.getDanio()* this.reliquia.getFactorDeAtaque()) )  ;
+        
+            personajeAtacado.setSalud(personajeAtacado.getSalud() - danio);
+            this.setStamina(this.getStamina()- arma.getStamina());
+        }
     }
+
 
 }
