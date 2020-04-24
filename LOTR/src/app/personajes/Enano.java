@@ -25,9 +25,7 @@ public class Enano extends Criatura {
             personajeAtacado.setSalud(personajeAtacado.getSalud() - danio);
             this.setStamina(this.getStamina()- arma.getStamina());
         }
-       
 
-}
-    
+    }
 
 }
