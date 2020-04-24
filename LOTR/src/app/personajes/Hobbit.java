@@ -32,12 +32,12 @@ public class Hobbit extends Criatura implements ILLevaReliquia{
         if (personajeAtacado instanceof ILLevaReliquia) {
             int danio = (int)(arma.getDanio()+ (arma.getDanio()* this.reliquia.getFactorDeAtaque()) - (arma.getDanio()*reliquia.getFactorDeDefensa()))  ;
         
-            personajeAtacado.setSalud(personajeAtacado.salud - danio);
+            personajeAtacado.setSalud(personajeAtacado.getSalud() - danio);
             this.setStamina(this.getStamina()- arma.getStamina());
         } else{
             int danio = (int)(arma.getDanio()+ (arma.getDanio()* this.reliquia.getFactorDeAtaque()) )  ;
         
-            personajeAtacado.setSalud(personajeAtacado.salud - danio);
+            personajeAtacado.setSalud(personajeAtacado.getSalud()- danio);
             this.setStamina(this.getStamina()- arma.getStamina());
         }
 

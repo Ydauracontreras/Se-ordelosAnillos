@@ -72,7 +72,7 @@ public class JuegoLOTR {
         Humano humanoDos = new Humano("Eowyn", 100, 50);
         Hobbit hobbitUno = new Hobbit("Frodo", 100, 30);
         Hobbit hobbitDos = new Hobbit("Samsagaz", 100, 30);
-        Goblin goblinUno = new Goblin("gobblin", 100, 40);
+        Goblin goblinUno = new Goblin("gobblinUno", 100, 40);
         Goblin goblinDos = new Goblin("gobblinDos", 100, 40);
         Orco orcoUno = new Orco("Ugluk", 100, 60);
         Orco orcoDos = new Orco("Snaga", 100, 60);

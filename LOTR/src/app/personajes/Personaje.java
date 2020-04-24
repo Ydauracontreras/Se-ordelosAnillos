@@ -85,7 +85,7 @@ public class Personaje {
      */
     public void atacar(Personaje personaje, Arma arma){
 
-        personaje.setSalud(personaje.salud - arma.getDanio());
+        personaje.setSalud(personaje.getSalud() - arma.getDanio());
 
 
 

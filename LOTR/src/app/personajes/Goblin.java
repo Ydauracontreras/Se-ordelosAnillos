@@ -35,12 +35,12 @@ public class Goblin extends Criatura {
         if (personajeAtacado instanceof ILLevaReliquia) {
             int danio = (int)(arma.getDanio()- arma.getDanio()*(((ILLevaReliquia)personajeAtacado).getReliquia().getFactorDeDefensa()));
         
-            personajeAtacado.setSalud(personajeAtacado.salud - danio);
+            personajeAtacado.setSalud(personajeAtacado.getSalud()- danio);
             this.setStamina(this.getStamina()- arma.getStamina());
         }
         else{
-            int danio = (int)(arma.getDanio()- arma.getDanio());
-            personajeAtacado.setSalud(personajeAtacado.salud - danio);
+            int danio = (int)( arma.getDanio());
+            personajeAtacado.setSalud(personajeAtacado.getSalud() - danio);
             this.setStamina(this.getStamina()- arma.getStamina());
         }
        
