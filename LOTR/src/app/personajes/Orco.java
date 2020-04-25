@@ -9,6 +9,7 @@ public class Orco extends Criatura {
         super(nombre, salud, stamina);
     }
 
+    @Override
     public void atacar(Personaje personajeAtacado, Arma arma){
 
         if (personajeAtacado instanceof ILLevaReliquia) {
