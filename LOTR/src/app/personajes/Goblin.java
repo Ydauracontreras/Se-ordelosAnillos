@@ -30,6 +30,8 @@ public class Goblin extends Criatura {
         this.reliquia = reliquia;
     }
 
+    @Override
+
     public void atacar(Personaje personajeAtacado, Arma arma){
 
         if (personajeAtacado instanceof ILLevaReliquia) {

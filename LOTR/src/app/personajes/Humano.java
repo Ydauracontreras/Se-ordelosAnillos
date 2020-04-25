@@ -10,11 +10,11 @@ public class Humano extends Personaje implements ILLevaReliquia {
 
 //Constructores
     public Humano(String nombre, int salud, int stamina, Reliquia reliquia) {
-        super(nombre, stamina, stamina);
+        super(nombre, salud, stamina);
         this.reliquia = reliquia;
     }
     public Humano(String nombre, int salud, int stamina) {
-        super(nombre, stamina, stamina);
+        super(nombre, salud, stamina);
     }
 
     public Humano() {
@@ -34,8 +34,7 @@ public class Humano extends Personaje implements ILLevaReliquia {
     }
     @Override
     public void atacar(Personaje personajeAtacado, Arma arma){
-
-        if (personajeAtacado instanceof ILLevaReliquia) {
+    if (personajeAtacado instanceof ILLevaReliquia) {
             int danio = (int)(arma.getDanio()+ (arma.getDanio()* this.reliquia.getFactorDeAtaque()) - (arma.getDanio()*reliquia.getFactorDeDefensa()))  ;
         
             personajeAtacado.setSalud(personajeAtacado.getSalud() - danio);
@@ -46,8 +45,7 @@ public class Humano extends Personaje implements ILLevaReliquia {
             personajeAtacado.setSalud(personajeAtacado.getSalud()- danio);
             this.setStamina(this.getStamina()- arma.getStamina());
         }
+    }
 
 
-
-}
 }

@@ -1,5 +1,4 @@
 package app.personajes;
-
 import app.IEsMagico;
 import app.IHaceMAgia;
 import app.ILLevaReliquia;
@@ -11,7 +10,7 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
     private Reliquia reliquia;
     
     public Elfo(String nombre, int salud, int stamina, Reliquia reliquia) {
-        super(nombre, stamina, stamina);
+        super(nombre, salud, stamina);
         this.reliquia = reliquia;
     }
 
@@ -45,7 +44,7 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
 
     @Override
     public boolean puedoEjecutarAtaqueEpico() {
-        if (this.stamina > 0 && this.stamina < 10)
+        if (this.getStamina() > 0 && this.getStamina() < 10)
             if (this.energiaMagica > 5) {
             return true;
         }
@@ -82,7 +81,8 @@ public class Elfo extends Criatura implements IHaceMAgia , ILLevaReliquia {
 
    
 
-    
-    }
+        
+       
 }
+    }
 }

@@ -195,7 +195,7 @@ public class JuegoLOTR {
         System.out.println(ANSI_CYAN + "********                 ELFO                    ********" + ANSI_RESET);
         System.out.println(ANSI_WHITE + "                         Legolas\n                         Arwen");
         System.out.println(ANSI_CYAN + "********                 ENANO                    ********" + ANSI_RESET);
-        System.out.println(ANSI_WHITE + "                         enanoUno\n                         enanoDos");
+        System.out.println(ANSI_WHITE + "                         EnanoUno\n                         EnanoDos");
         System.out.println(ANSI_CYAN + "********                 ORCO                    ********" + ANSI_RESET);
         System.out.println(ANSI_WHITE + "                         Ugluk\n                         Snaga");
         System.out.println(ANSI_CYAN + "********                 TROLL                   ********" + ANSI_RESET);
@@ -270,14 +270,14 @@ public class JuegoLOTR {
                 }
 
             } else {
-                System.out.println(ANSI_GREEN+"********      "+ personaje2.getNombre() + "  ha sido derrotado      ********"+ ANSI_RESET);
+                System.out.println(ANSI_GREEN+"********      "+ personaje2.getNombre() + "  ha sido derrotado         ********"+ ANSI_RESET);
             }
             if (personaje1.estaVivo()) {
                 System.out.println(ANSI_BLUE+"El jugador uno: " + personaje1.getNombre() + " tiene : " + personaje1.getSalud()
                         + " de salud y " + personaje1.getStamina() + " de Stamina"+ ANSI_RESET);
 
             } else {
-                System.out.println(ANSI_BLUE+"********      "+personaje1.getNombre() + "  ha sido derrotado      ********"+ ANSI_RESET);
+                System.out.println(ANSI_BLUE+"********      "+personaje1.getNombre() + "  ha sido derrotado            ********"+ ANSI_RESET);
             }
 
         }

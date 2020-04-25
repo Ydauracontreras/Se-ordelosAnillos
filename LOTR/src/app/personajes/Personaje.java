@@ -8,10 +8,10 @@ import app.armas.Arma;
 public class Personaje {
 
     //Atributos de la Clase personajes
-    protected String nombre;
-    protected int salud;
-    protected int stamina;
-    protected List<Arma> armas = new ArrayList<Arma>();
+    private String nombre;
+    private int salud;
+    private int stamina;
+    private List<Arma> armas = new ArrayList<Arma>();
 
 
 //Constructor con parametros= todos los atributos

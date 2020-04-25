@@ -7,19 +7,16 @@ import app.armas.Arma;
 
 
 public class Wizard extends Humano implements IHaceMAgia {
-
-
     private int energiaMagica;
 
     //Constructor 
-    public Wizard(String nombre, int salud, int stamina,  int energiaMagica
-    ) {
-        super();
-        this.nombre = nombre;
-        this.salud = salud;
-        this.stamina = stamina;
+    public Wizard(String nombre, int salud, int stamina,  int energiaMagica) {
+        super(nombre, salud, stamina);
         this.energiaMagica = energiaMagica;
+        
     }
+
+    
 
 //Getter
     public int getEnergiaMagica() {
@@ -33,7 +30,7 @@ public class Wizard extends Humano implements IHaceMAgia {
    //Este metodo nos dice si puede o no hacer un ataque epico
     @Override
     public boolean puedoEjecutarAtaqueEpico() {
-        if(this.stamina > 0 && this.stamina < 10) 
+        if(this.getStamina() > 0 && this.getStamina() < 10) 
                  if( this.energiaMagica > 5 ){
             return true;
         }
