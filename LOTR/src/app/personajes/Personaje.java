@@ -70,7 +70,7 @@ public class Personaje {
      */
     
      public boolean estaVivo(){
-        if (this.salud>0 && this.stamina >0) {
+        if (this.salud>0) {
             return true;
             
         }
