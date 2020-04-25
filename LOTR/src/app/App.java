@@ -119,7 +119,7 @@ public class App {
                System.out.println(
                          ANSI_PURPLE + "********             INICIA LA BATALLA             ********" + ANSI_RESET);
                System.out.println(ANSI_WHITE + "********             "+ ANSI_RESET + ANSI_BLUE + personaje1.getNombre()+ ANSI_RESET + " " + " vs" + " "
-               + ANSI_GREEN  + personaje2.getNombre()+ ANSI_RESET + "           ********" + ANSI_RESET);
+               + ANSI_GREEN  + personaje2.getNombre()+ ANSI_RESET + "               ********" + ANSI_RESET);
                mijuegoJava.iniciarBatalla(personaje1, personaje2);
 
           }
@@ -185,7 +185,7 @@ public class App {
                System.out.println(
                          ANSI_PURPLE + "********             INICIA LA BATALLA             ********" + ANSI_RESET);
                System.out.println(ANSI_WHITE + "********             "+ ANSI_RESET + ANSI_BLUE + personaje1.getNombre()+ ANSI_RESET + " " + " vs" + " "
-               + ANSI_GREEN  + personajeAleatorio.getNombre()+ ANSI_RESET + "           ********" + ANSI_RESET);
+               + ANSI_GREEN  + personajeAleatorio.getNombre()+ ANSI_RESET + "               ********" + ANSI_RESET);
                System.out.println("Tu Contrincante es: " +ANSI_GREEN+ personajeAleatorio.getNombre() + "-PC"+ANSI_RESET);
                mijuegoJava.iniciarBatalla(personaje1, personajeAleatorio);
 
